@@ -1,6 +1,7 @@
 [versions]
 agp = "9.2.1"
 coilCompose = "3.5.0"
+coilNetworkOkhttp = "3.5.0"
 coreKtx = "1.19.0"
 lifecycle = "2.11.0"
 activityCompose = "1.13.0"
@@ -24,6 +25,7 @@ androidx-compose-material3 = { group = "androidx.compose.material3", name = "mat
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilNetworkOkhttp" }
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
