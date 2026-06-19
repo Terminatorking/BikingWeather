@@ -56,6 +56,7 @@ dependencies {
 
     // Image loading
     implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
 
     // Location services
     implementation(libs.location.services)
