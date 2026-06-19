@@ -1,6 +1,7 @@
 package ghazimoradi.soheil.bikingweather.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
@@ -23,3 +24,4 @@ val Emerald = Color(0xFF4ADE80)
 val Pollen = Color(0xFFFACC15)
 val SoftRed = Color(0xFFF87171)
 val Poppy = Color(0xFFDC2626)
+val Gray = Color.Gray.toArgb()
