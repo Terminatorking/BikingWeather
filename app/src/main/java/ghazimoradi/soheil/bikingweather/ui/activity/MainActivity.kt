@@ -1,4 +1,4 @@
-package ghazimoradi.soheil.bikingweather
+package ghazimoradi.soheil.bikingweather.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
