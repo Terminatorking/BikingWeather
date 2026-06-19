@@ -38,6 +38,10 @@ fun BikeRidingCard(
     isBest: Boolean
 ) {
     val scoreColor = getScoreColor(score.score)
+    val formattedDate = remember(forecast.date) { viewModel.formatDate(forecast.date) }
+    val weatherIconUrl = remember(forecast.weather) {
+        viewModel.getWeatherIcon(forecast.weather.firstOrNull()?.icon ?: "")
+    }
 
     val backgroundColor = if (isBest)
         DarkAquamarineGreen.copy(alpha = 0.3f)
@@ -69,7 +73,7 @@ fun BikeRidingCard(
                     modifier = Modifier.weight(1f)
                 ) {
                     Text(
-                        text = viewModel.formatDate(forecast.date),
+                        text = formattedDate,
                         color = White,
                         fontSize = 18.sp,
                         fontWeight = FontWeight.Bold
@@ -106,9 +110,6 @@ fun BikeRidingCard(
             Row(
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                val weatherIconUrl =
-                    viewModel.getWeatherIcon(forecast.weather.firstOrNull()?.icon ?: "")
-
                 AsyncImage(
                     model = weatherIconUrl,
                     contentDescription = forecast.weather.firstOrNull()?.description,
@@ -152,7 +153,10 @@ fun BikeRidingCard(
             LazyRow(
                 horizontalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                items(score.factors) { factor ->
+                items(
+                    items = score.factors,
+                    key = { it.name }
+                ) { factor ->
                     FactorItem(
                         factor = factor,
                         height = maxFactorHeight

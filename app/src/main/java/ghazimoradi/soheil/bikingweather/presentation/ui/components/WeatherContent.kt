@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -20,7 +21,9 @@ fun WeatherContent(
     viewModel: WeatherViewModel
 ) {
     val dailyScores by viewModel.dailyScores
-    val bestDay = dailyScores.maxByOrNull { it.second.score }
+    val bestDay = remember(dailyScores) {
+        dailyScores.maxByOrNull { it.second.score }
+    }
 
     Column(
         Modifier
@@ -37,7 +40,10 @@ fun WeatherContent(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
 
-            items(dailyScores) { (forecast, score) ->
+            items(
+                items = dailyScores,
+                key = { (forecast, _) -> forecast.date }
+            ) { (forecast, score) ->
                 BikeRidingCard(
                     forecast = forecast,
                     score = score,
