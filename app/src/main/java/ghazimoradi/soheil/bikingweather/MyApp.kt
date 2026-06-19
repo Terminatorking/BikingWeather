@@ -1,4 +1,4 @@
-package ghazimoradi.soheil
+package ghazimoradi.soheil.bikingweather
 
 import android.app.Application
 import ghazimoradi.soheil.bikingweather.di.appModule
