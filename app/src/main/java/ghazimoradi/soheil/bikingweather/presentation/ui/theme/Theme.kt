@@ -1,4 +1,4 @@
-package ghazimoradi.soheil.bikingweather.ui.theme
+package ghazimoradi.soheil.bikingweather.presentation.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

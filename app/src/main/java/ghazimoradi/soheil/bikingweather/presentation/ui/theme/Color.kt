@@ -1,4 +1,4 @@
-package ghazimoradi.soheil.bikingweather.ui.theme
+package ghazimoradi.soheil.bikingweather.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
