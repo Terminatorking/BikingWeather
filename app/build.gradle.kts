@@ -42,4 +42,25 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // ViewModel
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+
+    // Networking
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    implementation(libs.gson)
+
+    // Image loading
+    implementation(libs.coil.compose)
+
+    // Location services
+    implementation(libs.location.services)
+
+    // Koin for DI
+    implementation(libs.koin.android)
+    implementation(libs.koin.androidx.compose.v410)
 }
